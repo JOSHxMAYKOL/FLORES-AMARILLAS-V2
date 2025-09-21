@@ -4,61 +4,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mensaje Especial</title>
+    <title>Mensaje Especial 💌</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
     <style>
+        /* Estilo general del cuerpo de la página */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Lora', serif; /* Fuente base para toda la página */
+            background: linear-gradient(to top, #f3e7e9 0%, #e3eeff 100%); /* Fondo con un gradiente suave */
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
 
+        /* Contenedor del mensaje con estilo de carta */
         .message-container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 80%;
+            background-color: #fffaf2; /* Color crema que simula papel antiguo */
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para efecto 3D */
+            border: 1px solid #e0d9cf;
+            width: 90%;
             max-width: 700px;
             text-align: center;
+            position: relative; /* Necesario para los elementos decorativos */
+            overflow: hidden; /* Para que los detalles no se salgan */
+            
+            /* Animación de entrada */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+        
+        /* Animación Keyframes */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
+        /* Detalle decorativo en la esquina */
+        .message-container::before {
+            content: '❤️';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            font-size: 50px;
+            opacity: 0.08;
+            transform: rotate(-15deg);
+        }
+
+        /* Título del mensaje */
         h1 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 20px;
+            font-family: 'Dancing Script', cursive; /* Fuente manuscrita para el título */
+            font-size: 3.5rem;
+            color: #5a4b4b;
+            margin-bottom: 25px;
         }
 
+        /* Párrafos del mensaje */
         p {
-            font-size: 1.2rem;
-            line-height: 1.6;
+            font-size: 1.15rem; /* Tamaño de fuente ligeramente ajustado */
+            line-height: 1.8;
             color: #555;
             margin-bottom: 20px;
+            text-align: justify; /* Justificar el texto para un look más formal */
         }
 
+        /* Firma */
         .signature {
-            font-style: italic;
-            font-size: 1.5rem;
-            color: #333;
+            font-family: 'Dancing Script', cursive; /* Fuente manuscrita para la firma */
+            font-size: 2.2rem;
+            color: #5a4b4b;
+            margin-top: 30px;
+            text-align: right;
         }
 
+        /* Estilo del botón */
         .back-btn {
-            margin-top: 20px;
-            padding: 10px 20px;
+            margin-top: 25px;
+            padding: 12px 25px;
             background-color: #ffb347;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px; /* Botón más redondeado */
             font-size: 1rem;
-            cursor: pointer;
+            font-weight: bold;
             color: white;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Transición suave para todos los efectos */
+            box-shadow: 0 4px 15px rgba(255, 179, 71, 0.4);
         }
 
+        /* Efecto al pasar el mouse sobre el botón */
         .back-btn:hover {
             background-color: #ff9e00;
+            transform: scale(1.05); /* El botón se hace un poco más grande */
+            box-shadow: 0 6px 20px rgba(255, 158, 0, 0.5);
         }
     </style>
 </head>
@@ -68,7 +117,7 @@
         <h1>Un Mensaje Especial</h1>
         <p>Sé que aún no nos hemos visto en persona, pero siento una conexión muy especial contigo, una que estoy seguro seguirá creciendo con el tiempo. Hoy es un día muy especial: 21 de septiembre. En esta fecha quiero regalarte unas flores amarillas. Aunque no pueda dártelas en persona, mi intención cuenta, y espero que te guste lo que he preparado para ti. Me tomó un tiempo hacerlo, pero con tal de ver una sonrisa en tu rostro, estaré más que feliz.</p>
 
-        <p>Quiero que sepas que no estás sola; Siempre estaré aquí para apoyarte. Habrá momentos divertidos, tristes, alegres, y quizás hasta algunos en los que reneguemos o pasemos situaciones un poco vergonzosas, pero espero estar a tu lado en cada uno de ellos.</p>
+        <p>Quiero que sepas que no estás sola; siempre estaré aquí para apoyarte. Habrá momentos divertidos, tristes, alegres, y quizás hasta algunos en los que reneguemos o pasemos situaciones un poco vergonzosas, pero espero estar a tu lado en cada uno de ellos.</p>
 
         <p>Se te quiere mucho, así que nunca pienses lo contrario.</p>
 
